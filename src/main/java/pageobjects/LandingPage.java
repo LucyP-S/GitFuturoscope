@@ -27,6 +27,9 @@ public class LandingPage extends AbstractComponents {
     @FindBy(css = "section[class*='bg-darkblue'] div[class*='flex'] a")
     List<WebElement> footerLinks;
 
+    @FindBy(id = "didomi-notice-agree-button")
+    WebElement agreeButton;
+
 
     public void goTo() {
         driver.get("https://www.futuroscope.com/en");
@@ -50,7 +53,15 @@ public class LandingPage extends AbstractComponents {
             System.out.println(respCode);
             }
         }
+
+    public BookingData acceptCookiesOnWindow() {
+        waitForElementToBeClickable(agreeButton);
+        agreeButton.click();
+        return new BookingData(driver);
     }
+    }
+
+
 
 
 
