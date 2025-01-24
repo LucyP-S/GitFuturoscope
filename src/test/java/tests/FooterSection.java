@@ -20,6 +20,7 @@ public class FooterSection extends BaseTest {
     public void urlsCheck() throws IOException {   // Function verifies if all footer URLs are working correctly
 
         landingPage.verifyFooterLinksRespCode();
+        System.out.println("Test");
 
 
 
