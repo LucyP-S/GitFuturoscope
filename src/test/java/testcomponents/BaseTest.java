@@ -41,7 +41,7 @@ public class BaseTest {
             WebDriverManager.chromedriver().setup();
             ChromeOptions options = new ChromeOptions();
             //options.addArguments("start-maximized");
-            options.addArguments("user-data-dir=/Users/lucyna.palucka/Library/Application Support/Google/Chrome/autotest");
+            // options.addArguments("user-data-dir=/Users/lucyna.palucka/Library/Application Support/Google/Chrome/autotest");
             if (browserName.contains("headless")) {
                 options.addArguments("headless");
             }

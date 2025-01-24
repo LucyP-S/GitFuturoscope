@@ -19,9 +19,9 @@ public class BookingFlow extends BaseTest {
     @Test(dataProvider = "getData", groups= {"SmokeTests"}, retryAnalyzer = Retry.class)
     public void flowWithSelectingDays(HashMap<String, String> input) throws InterruptedException, ParseException {
 
+        landingPage.acceptCookiesOnWindow().tapCalendarButton().scrollDown();
         BookingData bookingData = new BookingData(driver);
-        bookingData.tapCalendarButton().scrollDown();
-        int today = bookingData.getTodayFromCalendar();
+        int today = landingPage.getTodayFromCalendar();
         bookingData.getEnabledDays();
         bookingData.selectFirstEnabledDay(String.valueOf(today));
         String selectedDate = bookingData.getSelectedDate();  // Get selected date for assertion
@@ -41,8 +41,8 @@ public class BookingFlow extends BaseTest {
     @Test(dataProvider = "getData", retryAnalyzer = Retry.class)
     public void flowWithSelectingNights(HashMap<String, String> input) throws InterruptedException, ParseException {
 
+        landingPage.acceptCookiesOnWindow().tapCalendarButton().scrollDown();
         BookingData bookingData = new BookingData(driver);
-        bookingData.tapCalendarButton().scrollDown();
         int today = bookingData.getTodayFromCalendar();
         bookingData.getEnabledDays();
         bookingData.selectFirstEnabledDay(String.valueOf(today));
