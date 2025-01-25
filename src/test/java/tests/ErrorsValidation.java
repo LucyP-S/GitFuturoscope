@@ -7,6 +7,9 @@ import testcomponents.Retry;
 
 public class ErrorsValidation extends BaseTest {
 
+//new comment added 
+// second new comment
+
     @Test(groups="Error Handling")
     public void testFailedOnPurpose() {
         String textDisplayed = landingPage.getTextOnMovie();
