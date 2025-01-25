@@ -9,6 +9,7 @@ public class ErrorsValidation extends BaseTest {
 
 //new comment added 
 // second new comment
+    // third comment
 
     @Test(groups="Error Handling")
     public void testFailedOnPurpose() {
