@@ -24,6 +24,7 @@ public class FooterSection extends BaseTest {
 
 
 
+
        /* List<WebElement> links = driver.findElements(By.cssSelector("section[class*='bg-darkblue'] div[class*='flex'] a"));
         for (WebElement link : links) {
             String url = link.getAttribute("href");
